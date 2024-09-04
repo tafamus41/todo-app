@@ -8,7 +8,7 @@ const TodoForm = () => {
   };
 
   return (
-    <form className="TodoForm" onSubmit={handleSubmit}>
+    <form className="input-field" onSubmit={handleSubmit}>
       <input
         className="todo-input"
         value={value}
