@@ -29,7 +29,7 @@ const TodoForm = () => {
           Add New Task
         </button>
       </form>
-      <ul>
+      <ul className="list">
         {tasks.map((task, index) => (
           <li key={index}>{task}</li>
         ))}

@@ -69,6 +69,17 @@ input:valid ~ label{
   margin-left: 1.5rem;
   height:60px;
 }
+.list{
+  list-style-type: none;
+  text-align: start;
+  border:2px solid red;
+  width: 75%;
+  color:white;
+  
+}
+
+
+
 
 /* 
 
