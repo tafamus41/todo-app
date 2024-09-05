@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -12,22 +11,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border:2px solid red; */
 } 
 
 .TodoWrapper {
-  width: 600px;
-  aspect-ratio: 16/9;
+  width: 720px;
+  aspect-ratio: 16/12;
   border:2px solid white;
   background: #1A1A40;
-  /* margin-top: 5rem; */
   padding: 2rem;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
-  /* justify-content: center; */
 }
 .input-field {
   position:relative;
@@ -75,19 +71,6 @@ input:valid ~ label{
 }
 
 /* 
-.App {
-  text-align: center;
-}
-
-h1 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
-}
-
-
-
-
 
 .Todo {
   display: flex;
@@ -118,5 +101,5 @@ h1 {
 .edit-icon,
 .delete-icon {
   cursor: pointer;
-}
-  */ 
+} */
+   
