@@ -2,10 +2,13 @@ import React, { useState } from "react";
 
 const TodoForm = () => {
   const [value, setValue] = useState("");
-
+  const [tasks, setTasks] = useState([]);
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+    if (value.trim()) {
+      setTasks([...tasks, value]); 
+      setValue(""); 
+    }
   };
 
   return (
@@ -26,7 +29,11 @@ const TodoForm = () => {
           Add New Task
         </button>
       </form>
-      <p>Task:{value}</p>
+      <ul>
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
     </>
   );
 };
