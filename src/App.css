@@ -12,7 +12,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border:2px solid red; */
 } 
+
+.TodoWrapper {
+  width: 600px;
+  aspect-ratio: 16/9;
+  border:2px solid white;
+  background: #1A1A40;
+  /* margin-top: 5rem; */
+  padding: 2rem;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  /* justify-content: center; */
+}
 .input-field {
   position:relative;
 }
@@ -47,6 +63,16 @@ input:valid ~ label{
   padding: 0 10px;
   background: #191825;
 }
+.todo-btn {
+  background: #8758ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+  height:60px;
+}
 
 /* 
 .App {
@@ -59,23 +85,9 @@ h1 {
   font-size: 1.75rem;
 }
 
-.TodoWrapper {
-  background: #1A1A40;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 5px;
-}
 
-.todo-btn {
-  background: #8758ff;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 0.55rem;
-  cursor: pointer;
-  margin-left: 1.5rem;
-  height:60px;
-}
+
+
 
 .Todo {
   display: flex;
