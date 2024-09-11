@@ -3,14 +3,23 @@ import TodoList from "./TodoList";
 
 const TodoForm = () => {
   const [value, setValue] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("list")) || []
+);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value.trim()) {
       setTasks([...tasks, value]); 
+      localStorage.setItem("list", JSON.stringify(tasks));
       setValue(""); 
     }
   };
+  const handleDelete = (i) => {
+    const filteredTasks=tasks.filter((item,index)=>(index!==i))
+    setTasks(filteredTasks)
+    localStorage.setItem("list", JSON.stringify(filteredTasks));
+  };
+
+
   return (
     <>
       <form className="input-field" onSubmit={handleSubmit}>
@@ -19,7 +28,7 @@ const TodoForm = () => {
         <label> Enter your tasks</label>
         <button type="submit" className="todo-btn"> Add New Task </button>
       </form>
-      <TodoList value={value} tasks={tasks} setTasks={setTasks}/>
+      <TodoList value={value} tasks={tasks} setTasks={setTasks} handleDelete={handleDelete}/>
     </>
   );
 };

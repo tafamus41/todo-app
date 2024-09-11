@@ -2,19 +2,24 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
-const TodoList = ({ value, tasks, setTasks }) => {
+const TodoList = ({ value, tasks, setTasks,handleDelete }) => {
   // console.log(value);
-  console.log(tasks);
+  // console.log(tasks);
+
+  
   return (
     <div>
-      {tasks.map((item,i) => (
-        <p className="whattodo text-white border border-2 border-white p-2" key={i}>
+      {tasks.map((item, i) => (
+        <p
+          className="whattodo text-white border border-2 border-white p-2"
+          key={i}
+        >
           {item}
           <AiFillDelete
             type="button"
             size={22}
             className="text-danger cursor-pointer mx-3"
-            // onClick={() => deleteKitap(id)}
+            onClick={() => handleDelete(i)}
           />
           <FaEdit
             data-bs-toggle="modal"
