@@ -7,22 +7,25 @@ const TodoList = ({ value, tasks, setTasks }) => {
   console.log(tasks);
   return (
     <div>
-      <p className="text-center ">
-        <AiFillDelete
-          type="button"
-          size={22}
-          className="text-danger cursor-pointer mx-3"
-          // onClick={() => deleteKitap(id)}
-        />
-        <FaEdit
-          data-bs-toggle="modal"
-          data-bs-target="#editModal"
-          size={20}
-          type="button"
-          className="me-2 text-danger cursor-pointer"
-          // onClick={() => setEditItem({title,ISBN,image,genre,id,author,publicationYear})}
-        />
-      </p>
+      {tasks.map((item,i) => (
+        <p className="whattodo text-white border border-2 border-white p-2" key={i}>
+          {item}
+          <AiFillDelete
+            type="button"
+            size={22}
+            className="text-danger cursor-pointer mx-3"
+            // onClick={() => deleteKitap(id)}
+          />
+          <FaEdit
+            data-bs-toggle="modal"
+            data-bs-target="#editModal"
+            size={20}
+            type="button"
+            className="me-2 text-danger cursor-pointer"
+            // onClick={() => setEditItem({title,ISBN,image,genre,id,author,publicationYear})}
+          />
+        </p>
+      ))}
     </div>
   );
 };
