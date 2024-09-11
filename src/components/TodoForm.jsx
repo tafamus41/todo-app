@@ -19,7 +19,7 @@ const TodoForm = () => {
         <label> Enter your tasks</label>
         <button type="submit" className="todo-btn"> Add New Task </button>
       </form>
-      <TodoList/>
+      <TodoList value={value} tasks={tasks}/>
     </>
   );
 };

@@ -1,8 +1,10 @@
 import React from 'react'
 
-const TodoList = () => {
+const TodoList = ({value,tasks}) => {
+    // console.log(value);
+    console.log(tasks);
   return (
-    <div>TodoList</div>
+    <div></div>
   )
 }
 
