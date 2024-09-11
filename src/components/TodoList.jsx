@@ -19,7 +19,7 @@ const TodoList = ({ value, tasks, setTasks }) => {
           data-bs-target="#editModal"
           size={20}
           type="button"
-          className="me-2 text-warning cursor-pointer"
+          className="me-2 text-danger cursor-pointer"
           // onClick={() => setEditItem({title,ISBN,image,genre,id,author,publicationYear})}
         />
       </p>
