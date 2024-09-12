@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
+import EditTaskModal from "./EditTaskModal";
 
 const TodoList = ({tasks,handleDelete }) => {
+  const[task,setTask]=useState("")
   return (
     <div>
       {tasks.map((item, i) => (
@@ -19,14 +21,16 @@ const TodoList = ({tasks,handleDelete }) => {
           />
           <FaEdit
             data-bs-toggle="modal"
-            data-bs-target="#editModal"
+            data-bs-target="#editTaskModal"
             size={20}
             type="button"
             className="me-2 text-danger cursor-pointer"
-            // onClick={() => setEditItem({title,ISBN,image,genre,id,author,publicationYear})}
+            onClick={() => setTask(i)}
           />
         </p>
+
       ))}
+      <EditTaskModal tasks={tasks}/>
     </div>
   );
 };
