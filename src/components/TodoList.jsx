@@ -2,11 +2,7 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
-const TodoList = ({ value, tasks, setTasks,handleDelete }) => {
-  // console.log(value);
-  // console.log(tasks);
-
-  
+const TodoList = ({tasks,handleDelete }) => {
   return (
     <div>
       {tasks.map((item, i) => (
