@@ -1,11 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditTaskModal from "./EditTaskModal";
 
-const TodoList = ({value,tasks,handleDelete }) => {
-  const[task,setTask]=useState(value)
+const TodoList = ({setTasks,tasks,handleDelete }) => {
+//   const[task,setTask]=useState("")
+// const handleEdit=(a,index)=>{
+// setTask(a)
+
+// }
+
   return (
+    
     <div>
       {tasks.map((item, i) => (
         <p
@@ -25,11 +31,11 @@ const TodoList = ({value,tasks,handleDelete }) => {
             size={20}
             type="button"
             className="me-2 text-danger cursor-pointer"
-            onClick={() => setTask()}
+            // onClick={() => handleEdit(item,i)}
           />
         </p>
       ))}
-      <EditTaskModal task={task} setTask={setTask}/>
+      <EditTaskModal />
     </div>
   );
 };

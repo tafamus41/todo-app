@@ -29,7 +29,7 @@ localStorage.setItem("list", JSON.stringify(tasks));
         <label> Enter your tasks</label>
         <button type="submit" className="todo-btn"> Add New Task </button>
       </form>
-      <TodoList value={value} tasks={tasks} setTasks={setTasks} handleDelete={handleDelete}/>
+      <TodoList tasks={tasks} setTasks={setTasks} handleDelete={handleDelete}/>
     </>
   );
 };
