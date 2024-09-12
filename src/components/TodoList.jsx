@@ -3,8 +3,8 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditTaskModal from "./EditTaskModal";
 
-const TodoList = ({tasks,handleDelete }) => {
-  const[task,setTask]=useState("")
+const TodoList = ({value,tasks,handleDelete }) => {
+  const[task,setTask]=useState(value)
   return (
     <div>
       {tasks.map((item, i) => (
@@ -25,12 +25,11 @@ const TodoList = ({tasks,handleDelete }) => {
             size={20}
             type="button"
             className="me-2 text-danger cursor-pointer"
-            onClick={() => setTask(i)}
+            onClick={() => setTask()}
           />
         </p>
-
       ))}
-      <EditTaskModal tasks={tasks}/>
+      <EditTaskModal task={task} setTask={setTask}/>
     </div>
   );
 };
