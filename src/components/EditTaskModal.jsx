@@ -1,8 +1,7 @@
 import React from "react";
 
-const EditTaskModal = ({tasks,editTask,setEditTask}) => {
-  // console.log(setEditTask({item}));
-  return (
+const EditTaskModal = ({tasks,editTask,setEditTask,setTasks}) => {
+    return (
     <div
       className="modal fade"
       id="editTaskModal"
@@ -40,8 +39,7 @@ const EditTaskModal = ({tasks,editTask,setEditTask}) => {
             <button
               type="button"
               className="btn btn-info"
-              data-bs-dismiss="modal"
-              
+              data-bs-dismiss="modal"          
             >
               Save
             </button>

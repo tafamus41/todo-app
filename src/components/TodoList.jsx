@@ -30,7 +30,7 @@ const TodoList = ({setTasks,tasks,handleDelete }) => {
           />
         </p>
       ))}
-      <EditTaskModal editTask={editTask} setEditTask={setEditTask} tasks={tasks} />
+      <EditTaskModal editTask={editTask} setEditTask={setEditTask} tasks={tasks} setTasks={setTasks}/>
     </div>
   );
 };
