@@ -1,13 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import TodoWrapper from "./components/TodoWrapper";
 
 function App() {
-  return (
-    <div className="App">
-      <TodoWrapper />
-    </div>
-  );
+  return <TodoWrapper />;
 }
 
 export default App;

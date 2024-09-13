@@ -8,9 +8,9 @@ const TodoList = ({ setTasks, tasks, handleDelete }) => {
   return (
     <div >
       {tasks.map((item, i) => (
-        <div className="whattodo border border-2 border-white p-2 my-4">
+        <div className="border border-2 border-white p-2 my-4 todoList">
           <p
-            className="text-white my-2"
+            className="text-white my-2 "
             key={i}
           >
             {item}
