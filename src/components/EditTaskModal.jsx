@@ -1,7 +1,7 @@
 import React from "react";
 
-const EditTaskModal = () => {
-  
+const EditTaskModal = ({tasks,editTask,setEditTask}) => {
+  // console.log(setEditTask({item}));
   return (
     <div
       className="modal fade"
@@ -29,10 +29,10 @@ const EditTaskModal = () => {
                 type="text"
                 className="form-control"
                 id="title"
-                // value={}
-                //   onChange={(e) =>
-                //     setEditItem(e.target.value)
-                //   }
+                value={editTask}
+                  onChange={(e) =>
+                    setEditTask(e.target.value)
+                  }
               />
             </div>
           </div>
