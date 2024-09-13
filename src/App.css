@@ -82,4 +82,8 @@ input:valid ~ label{
   background-color:black;
   width: 400px;
   box-shadow: 0 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
