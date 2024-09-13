@@ -12,10 +12,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border:2px solid red; */
 } 
-
-.TodoWrapper {
+#root{
+  /* border:2px solid green; */
   width: 100%;
+  display:flex;
+  justify-content: center;
+}
+.TodoWrapper {
+  width: 95%;
+  height: 95%;
   aspect-ratio: 16/9;
   border:2px solid white;
   background: #1A1A40;
