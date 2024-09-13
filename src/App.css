@@ -12,10 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border:2px solid red; */
 } 
 #root{
-  /* border:2px solid green; */
   width: 100%;
   display:flex;
   justify-content: center;
