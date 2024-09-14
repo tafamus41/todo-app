@@ -1,7 +1,19 @@
 import React from "react";
 
-const EditTaskModal = ({tasks,editTask,setEditTask,setTasks}) => {
-    return (
+const EditTaskModal = ({
+  tasks,
+  editTask,
+  setEditTask,
+  setTasks,
+  handleEdit,
+  taskId,
+}) => {
+  const handleSave = () => {
+    const updatedTask = tasks.map((item, i) => (i === taskId ? editTask : item));
+    setTasks(updatedTask)
+    localStorage.setItem("list", JSON.stringify(updatedTask));
+  };
+  return (
     <div
       className="modal fade"
       id="editTaskModal"
@@ -20,7 +32,7 @@ const EditTaskModal = ({tasks,editTask,setEditTask,setTasks}) => {
             ></button>
           </div>
           <div className="modal-body">
-            <div className="mb-3">
+            <form className="mb-3">
               <label htmlFor="title" className="form-label">
                 Rearrange Your Task
               </label>
@@ -29,20 +41,19 @@ const EditTaskModal = ({tasks,editTask,setEditTask,setTasks}) => {
                 className="form-control"
                 id="title"
                 value={editTask}
-                  onChange={(e) =>
-                    setEditTask(e.target.value)
-                  }
+                onChange={(e) => setEditTask(e.target.value)}
               />
-            </div>
-          </div>
-          <div className="modal-footer">
-            <button
-              type="button"
-              className="btn btn-info"
-              data-bs-dismiss="modal"          
-            >
-              Save
-            </button>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-info"
+                  data-bs-dismiss="modal"
+                  onClick={handleSave}
+                >
+                  Save
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

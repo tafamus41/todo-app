@@ -5,14 +5,18 @@ import EditTaskModal from "./EditTaskModal";
 
 const TodoList = ({ setTasks, tasks, handleDelete }) => {
   const [editTask, setEditTask] = useState("");
+  const [taskId,setEditId]=useState(null);
+
+  const handleEdit = (item, i) => {
+    setEditTask(item)
+    setEditId(i)
+  };
+
   return (
-    <div >
+    <div>
       {tasks.map((item, i) => (
         <div className="border border-2 border-white p-2 my-4 todoList" key={i}>
-          <p
-            className="text-white my-2 "
-            key={i}
-          >
+          <p className="text-white my-2 " key={i}>
             {item}
           </p>
           <p>
@@ -28,7 +32,7 @@ const TodoList = ({ setTasks, tasks, handleDelete }) => {
               size={20}
               type="button"
               className="me-2 text-danger cursor-pointer"
-              onClick={() => setEditTask(item)}
+              onClick={() => handleEdit(item, i)}
             />
           </p>
         </div>
@@ -38,6 +42,7 @@ const TodoList = ({ setTasks, tasks, handleDelete }) => {
         setEditTask={setEditTask}
         tasks={tasks}
         setTasks={setTasks}
+        taskId={taskId}
       />
     </div>
   );

@@ -5,12 +5,12 @@ const TodoForm = () => {
   const [value, setValue] = useState("");
   const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("list")) || []
 );
-localStorage.setItem("list", JSON.stringify(tasks));
+// localStorage.setItem("list", JSON.stringify(tasks));
   const handleSubmit = (e) => {
     e.preventDefault();
     if (value.trim()) {
       setTasks([...tasks, value]); 
-      // localStorage.setItem("list", JSON.stringify(tasks));
+      localStorage.setItem("list", JSON.stringify(tasks));
       setValue(""); 
     }
   };
