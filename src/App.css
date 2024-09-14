@@ -13,15 +13,21 @@ body {
   justify-content: center;
   align-items: center;
 } 
-#root{
+/* #root{
   width: 96%;
   display:flex;
   justify-content: center;
+} */
+
+.todoDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 .TodoWrapper {
-  width: 96%;
-  height: 95%;
-  aspect-ratio: 16/9;
+  width: 91%;
+  height: 500px;
   border:2px solid white;
   background: #1A1A40;
   padding: 2rem;
