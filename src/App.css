@@ -21,7 +21,6 @@ body {
 }
 .TodoWrapper {
   width: 91%;
-  height: 500px;
   border:2px solid white;
   background: #1A1A40;
   padding: 2rem;
